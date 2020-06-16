@@ -65,7 +65,7 @@ pipelines:
         stepMode: Bash
         configuration:
           inputSteps: 
-            - name: Matrix_Fan_Out_1
+            - name: Matrix_Fan_Out_22
           inputResources:
             - name: self_repo
         stepletMultipliers:
