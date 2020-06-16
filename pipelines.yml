@@ -52,7 +52,7 @@ pipelines:
         type: FanOut
         configuration:
           inputSteps: 
-            - name: Matrix_Fan_Out_1      
+            - name: Normal_Step      
         execution: 
           onExecute:      
             - echo "I am on fan out step"
@@ -65,6 +65,7 @@ pipelines:
         stepMode: Bash
         configuration:
           inputSteps: 
+            - name: Matrix_Fan_Out_1
             - name: Matrix_Fan_Out_22
           inputResources:
             - name: self_repo
@@ -117,6 +118,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Hello World"
+            - printenv | grep test_key
             - ls -l .
             - ls -l ./matrix_2
             - ls -l ./matrix_2/Matrix_Fan_Out_1/
