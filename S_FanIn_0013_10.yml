@@ -118,6 +118,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Hello World"
+            - printenv
             - printenv | grep test_key
             - ls -l .
             - ls -l ./matrix_2
