@@ -107,6 +107,7 @@ pipelines:
             # - save_tests saveTests/empty/temp
             # - save_tests saveTests/correct
             # - echo "Passed"
+            - printenv
             - popd
             - ls -l .
       
